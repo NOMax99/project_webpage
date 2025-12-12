@@ -63,8 +63,61 @@ main {
     min-height: 60vh;
 }
 
-/* Header Styles */
-.header {
+/* Brand Top Section (Logo Area) */
+.brand-top {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.brand-top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Main Logo */
+.brand-link {
+    display: flex;
+    align-items: center;
+}
+
+.brand-link .logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Partner Logos */
+.partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.partner {
+    display: inline-block;
+}
+
+.partner-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.partner:hover .partner-logo {
+    opacity: 0.7;
+}
+
+/* Navigation Section */
+.site-header {
     background: var(--bg);
     border-bottom: 3px solid var(--brand);
     position: sticky;
@@ -72,34 +125,26 @@ main {
     z-index: 100;
 }
 
-.navbar {
-    width: 100%;
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.site-nav {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
-    color: var(--text);
-    margin: 0;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
     gap: 15px;
     margin: 0;
     padding: 15px 0;
 }
 
-.nav-link {
+.site-nav li {
+    display: inline-block;
+}
+
+.site-nav a {
     text-decoration: none;
     color: var(--text);
     font-weight: bold;
@@ -108,13 +153,13 @@ main {
     transition: all 0.3s;
 }
 
-.nav-link:hover {
+.site-nav a:hover {
     background: #eaf7ea;
     color: var(--brand);
     text-decoration: none;
 }
 
-.nav-link.active {
+.site-nav a.active {
     color: var(--brand);
     background: #eaf7ea;
 }
@@ -263,15 +308,31 @@ section h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar .container {
+    /* Brand-Top Mobile */
+    .brand-top-inner {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        text-align: center;
     }
-
-    .nav-menu {
+    
+    .brand-link .logo {
+        height: 60px;
+    }
+    
+    .partner-logos {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .partner-logo {
+        height: 30px;
+    }
+    
+    /* Navigation Mobile */
+    .site-nav {
         flex-direction: column;
         gap: 0.5rem;
-        text-align: center;
+        padding: 10px 0;
     }
 
     .hero {
