@@ -33,7 +33,14 @@ function renderNews(newsItems) {
     newsContainer.innerHTML = '';
 
     // Sort news by date (newest first)
-    const sortedNews = newsItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const sortedNews = newsItems.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        // Handle invalid dates by placing them at the end
+        if (isNaN(dateA.getTime())) return 1;
+        if (isNaN(dateB.getTime())) return -1;
+        return dateB - dateA;
+    });
 
     // Create and append news cards
     sortedNews.forEach(newsItem => {
@@ -57,7 +64,7 @@ function createNewsCard(newsItem) {
 
     // Create card HTML
     card.innerHTML = `
-        ${newsItem.image ? `<img src="${newsItem.image}" alt="${newsItem.title}" class="news-card-image">` : '<div class="news-card-image"></div>'}
+        ${newsItem.image ? `<img src="${escapeHtml(newsItem.image)}" alt="${escapeHtml(newsItem.title)}" class="news-card-image">` : '<div class="news-card-image"></div>'}
         <div class="news-card-content">
             <h3 class="news-card-title">${escapeHtml(newsItem.title)}</h3>
             <p class="news-card-date">${formattedDate}</p>
@@ -76,6 +83,10 @@ function createNewsCard(newsItem) {
  */
 function formatDate(dateString) {
     const date = new Date(dateString);
+    // Validate date
+    if (isNaN(date.getTime())) {
+        return 'Datum unbekannt';
+    }
     return date.toLocaleDateString('de-DE', {
         year: 'numeric',
         month: 'long',
@@ -89,6 +100,10 @@ function formatDate(dateString) {
  * @returns {string} - Escaped text
  */
 function escapeHtml(text) {
+    // Handle null, undefined, or non-string inputs
+    if (text == null || typeof text !== 'string') {
+        return '';
+    }
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;

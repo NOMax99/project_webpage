@@ -21,7 +21,7 @@ function initializeNavigation() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
-            if (window.pageYOffset >= (sectionTop - 100)) {
+            if (window.scrollY >= (sectionTop - 100)) {
                 current = section.getAttribute('id');
             }
         });
@@ -48,7 +48,7 @@ function initializeSmoothScroll() {
             if (targetSection) {
                 const headerOffset = 80;
                 const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
