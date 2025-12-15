@@ -1,0 +1,368 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand: #4CAF50;
+    --text: #333;
+    --muted: #666;
+    --bg: #f5f5f5;
+    --border: #e5e5e5;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --max-width: 1200px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    color: var(--brand);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+main {
+    min-height: 60vh;
+}
+
+/* Brand Top Section (Logo Area) */
+.brand-top {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.brand-top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Main Logo */
+.brand-link {
+    display: flex;
+    align-items: center;
+}
+
+.brand-link .logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Partner Logos */
+.partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.partner {
+    display: inline-block;
+}
+
+.partner-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.partner:hover .partner-logo {
+    opacity: 0.7;
+}
+
+/* Navigation Section */
+.site-header {
+    background: var(--bg);
+    border-bottom: 3px solid var(--brand);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.site-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.site-nav li {
+    display: inline-block;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.site-nav a:hover {
+    background: #eaf7ea;
+    color: var(--brand);
+    text-decoration: none;
+}
+
+.site-nav a.active {
+    color: var(--brand);
+    background: #eaf7ea;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f8fff8 0%, #e8f5e9 100%);
+    padding: 60px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--brand);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--muted);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 15px;
+}
+
+section h2 {
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    margin-bottom: 20px;
+    color: var(--brand);
+    border-bottom: 2px solid var(--brand);
+    padding-bottom: 10px;
+}
+
+.news-section {
+    background-color: var(--bg);
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* News Card */
+.news-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #e8f5e9, #4CAF50);
+}
+
+.news-card-content {
+    padding: 30px;
+}
+
+.news-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--brand);
+}
+
+.news-card-date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.news-card-description {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.news-card-category {
+    display: inline-block;
+    background-color: var(--brand);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    background: #fff;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--bg);
+    text-align: center;
+}
+
+.contact-section p {
+    color: var(--text);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: var(--brand);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Brand-Top Mobile */
+    .brand-top-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .brand-link .logo {
+        height: 60px;
+    }
+    
+    .partner-logos {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .partner-logo {
+        height: 30px;
+    }
+    
+    /* Navigation Mobile */
+    .site-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
