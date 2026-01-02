@@ -178,7 +178,7 @@ main {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #f8fff8 0%, #e8f5e9 100%);
-    padding: 60px 15px;
+    padding: 24px 15px;
     text-align: center;
     border-bottom: 1px solid var(--border);
 }
@@ -189,22 +189,23 @@ main {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     color: var(--brand);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    line-height: 1.15;
 }
 
 .hero h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     color: var(--brand);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .hero p {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: var(--muted);
-    margin-bottom: 30px;
-    line-height: 1.7;
+    margin-bottom: 10px;
+    line-height: 1.15;
 }
 
 .lead {
@@ -394,7 +395,7 @@ section h2 {
     background-color: #333;
     color: #fff;
     padding: 20px 15px;
-    text-align: center;
+    text-align: justify;
     margin-top: 30px;
 }
 
