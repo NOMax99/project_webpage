@@ -366,6 +366,44 @@ section h2 {
     font-weight: bold;
 }
 
+/* Content Figures and Images */
+.content-figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.content-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.content-figure figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    min-height: 200px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px dashed var(--brand);
+}
+
+/* Placeholder for missing images */
+img[src*="placeholder"],
+img:not([src]),
+.content-figure img[src*=".jpg"]:not([src=""]) {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    min-height: 200px;
+}
+
 /* About Section */
 .about-section {
     text-align: center;
