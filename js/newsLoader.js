@@ -77,7 +77,7 @@ function createNewsCard(newsItem) {
 }
 
 /**
- * Formats a date string to German locale
+ * Formats a date string to English locale
  * @param {string} dateString - ISO date string
  * @returns {string} - Formatted date
  */
@@ -85,9 +85,9 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     // Validate date
     if (isNaN(date.getTime())) {
-        return 'Datum unbekannt';
+        return 'Date unknown';
     }
-    return date.toLocaleDateString('de-DE', {
+    return date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -117,7 +117,7 @@ function displayErrorMessage() {
     if (newsContainer) {
         newsContainer.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
-                <p>Neuigkeiten konnten nicht geladen werden. Bitte versuchen Sie es später erneut.</p>
+                <p>News could not be loaded. Please try again later.</p>
             </div>
         `;
     }
