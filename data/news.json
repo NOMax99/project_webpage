@@ -2,26 +2,26 @@
   "news": [
     {
       "id": 1,
-      "title": "Neue Website gestartet",
+      "title": "New Website Launched",
       "date": "2025-12-12",
-      "category": "Ankündigung",
-      "description": "Wir freuen uns, unsere neue wiederverwendbare Website-Struktur zu präsentieren. Diese Plattform ermöglicht es, einfach neue Inhalte hinzuzufügen.",
+      "category": "Announcement",
+      "description": "We are pleased to present our new reusable website structure. This platform makes it easy to add new content.",
       "image": ""
     },
     {
       "id": 2,
-      "title": "Modulares Design implementiert",
+      "title": "Modular Design Implemented",
       "date": "2025-12-11",
-      "category": "Entwicklung",
-      "description": "Unsere Website nutzt jetzt ein vollständig modulares Design. Komponenten können einfach wiederverwendet und angepasst werden.",
+      "category": "Development",
+      "description": "Our website now uses a fully modular design. Components can be easily reused and customized.",
       "image": ""
     },
     {
       "id": 3,
-      "title": "JSON-basiertes Content Management",
+      "title": "JSON-based Content Management",
       "date": "2025-12-10",
       "category": "Feature",
-      "description": "Neue Inhalte können einfach durch Bearbeiten der JSON-Datei hinzugefügt werden, ohne den HTML-Code zu ändern.",
+      "description": "New content can be easily added by editing the JSON file without changing the HTML code.",
       "image": ""
     },
     {
@@ -29,7 +29,7 @@
       "title": "Responsive Design",
       "date": "2025-12-09",
       "category": "Design",
-      "description": "Die Website ist vollständig responsive und passt sich automatisch an verschiedene Bildschirmgrößen an.",
+      "description": "The website is fully responsive and automatically adapts to different screen sizes.",
       "image": ""
     }
   ]
