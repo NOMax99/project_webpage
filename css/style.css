@@ -198,6 +198,7 @@ main {
 .hero h2 {
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     color: var(--brand);
+    margin-top: 200px;
     margin-bottom: 12px;
 }
 
