@@ -113,7 +113,7 @@ main {
 }
 
 .partner {
-    display: inline-block;
+   display: inline-block;
 }
 
 .partner-logo {
@@ -366,42 +366,6 @@ section h2 {
     font-weight: bold;
 }
 
-/* Content Figures and Images */
-.content-figure {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.content-figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.content-figure figcaption {
-    margin-top: 12px;
-    font-size: 0.9rem;
-    color: var(--muted);
-    font-style: italic;
-}
-
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    min-height: 200px;
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    border: 2px dashed var(--brand);
-}
-
-/* Placeholder styling for images that fail to load */
-.content-figure img {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    min-height: 200px;
-}
-
 /* About Section */
 .about-section {
     text-align: center;
@@ -447,6 +411,51 @@ section h2 {
 .footer a:hover {
     color: var(--brand);
 }
+
+
+.content-figure {
+  text-align: center;
+}
+.responsive-img {
+  max-width: 100%;   /* passt sich an die Breite des Containers an */
+  height: auto;      /* behält das Seitenverhältnis */
+  display: block;    /* entfernt unnötige Lücken */
+}
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.2rem; /* vorher war evtl. 1rem oder mehr */
+}
+
+
+/* Container für zwei Elemente nebeneinander */
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-row figure {
+  text-align: center;
+  max-width: 300px; /* Bildgröße begrenzen */
+  margin: 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-row figcaption {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
