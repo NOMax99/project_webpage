@@ -396,10 +396,8 @@ section h2 {
     border: 2px dashed var(--brand);
 }
 
-/* Placeholder for missing images */
-img[src*="placeholder"],
-img:not([src]),
-.content-figure img[src*=".jpg"]:not([src=""]) {
+/* Placeholder styling for images that fail to load */
+.content-figure img {
     background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
     min-height: 200px;
 }
