@@ -198,14 +198,14 @@ main {
 .hero h2 {
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     color: var(--brand);
-    margin-top: 200px;
-    margin-bottom: 12px;
+   margin-bottom: 1px;
+   margin-top: 1rem;
 }
 
 .hero p {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: var(--muted);
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     line-height: 1.15;
 }
 
@@ -249,8 +249,8 @@ section h2 {
     font-size: clamp(1.4rem, 2vw, 1.6rem);
     margin-bottom: 20px;
     color: var(--brand);
-    border-bottom: 2px solid var(--brand);
-    padding-bottom: 10px;
+    border-bottom: 1px solid var(--brand);
+    padding-bottom: 2px;
 }
 
 .link {
@@ -436,19 +436,19 @@ figcaption {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-}
+ }
 
 .image-row figure {
   text-align: center;
-  max-width: 300px; /* Bildgröße begrenzen */
+  max-width: 400px; /* Bildgröße begrenzen */
   margin: 0;
 }
 
 .image-row img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 400px;      /* feste Breite für alle Bilder */
+  height: 300px;     /* feste Höhe */
 }
+
 
 .image-row figcaption {
   margin-top: 0.25rem;
