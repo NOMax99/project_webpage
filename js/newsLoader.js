@@ -32,8 +32,11 @@ function renderNews(newsItems) {
     // Clear existing content
     newsContainer.innerHTML = '';
 
+    // Filter only active news items
+    const activeNews = newsItems.filter(item => item.active === true);
+
     // Sort news by date (newest first)
-    const sortedNews = newsItems.sort((a, b) => {
+    const sortedNews = activeNews.sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
         // Handle invalid dates by placing them at the end
@@ -70,6 +73,7 @@ function createNewsCard(newsItem) {
             <p class="news-card-date">${formattedDate}</p>
             <p class="news-card-description">${escapeHtml(newsItem.description)}</p>
             ${newsItem.category ? `<span class="news-card-category">${escapeHtml(newsItem.category)}</span>` : ''}
+            ${newsItem.link ? `<a href="${escapeHtml(newsItem.link)}" class="news-card-link" target="_blank" rel="noopener noreferrer">Read more →</a>` : ''}
         </div>
     `;
 

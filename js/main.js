@@ -4,7 +4,9 @@ import { loadNews } from './newsLoader.js';
 // Initialize the website
 document.addEventListener('DOMContentLoaded', () => {
     initializeNavigation();
-    loadNews();
+    if (document.getElementById('news-container')) {
+        loadNews();
+    }
     initializeSmoothScroll();
 });
 

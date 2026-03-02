@@ -1,28 +1,43 @@
 {
   "news": [
-    {
+   {
       "id": 1,
-      "title": "New Website Launched",
-      "date": "2025-12-12",
+      "title": "DisCoverCrop Kick-Off Meeting",
+      "date": "2025-06-15",
       "category": "Announcement",
-      "description": "We are pleased to present our new reusable website structure. This platform makes it easy to add new content.",
-      "image": ""
+      "description": "We are pleased to inform you that the project group has successfully held the kick-off meeting for DisCoverCrop at the SLU Campus in Alnarp. We are excited to start this journey and will keep you updated on our progress.",
+      "image": "images/Kickoff2.jpg",
+      "active": true
     },
     {
       "id": 2,
-      "title": "Modular Design Implemented",
-      "date": "2025-12-11",
-      "category": "Development",
-      "description": "Our website now uses a fully modular design. Components can be easily reused and customized.",
-      "image": ""
+      "title": "DisCoverCrop participated at the Norwegian Potato Fagforum 2026",
+      "date": "2026-01-20",
+      "category": "Announcement",
+      "description": "DisCoverCrop was presented at the Norwegian Potato Fagforum 2026, highlighting its ambition to advance sustainable potato production through the strategic use of cover crops in Norway. The audience consisted of potato producers, crop-production advisors, researchers, industry stakeholders, exhibitors and technology providers. The project was well received and we look forward to further collaborations in Norway.",
+      "image": "images/2026FagforumPotetNO.jpg",
+      "link": "https://potet.no/prosjekter/discovercrop",
+      "active": true
+    }, 
+    {
+      "id": 5,
+      "title": "DisCoverCrop News Section Is Live",
+      "date": "2026-03-02",
+      "category": "Project Update",
+      "description": "We have activated the News page and can now publish regular project updates, events, and publications.",
+      "image": "",
+      "active": false
     },
+    
+
     {
       "id": 3,
       "title": "JSON-based Content Management",
       "date": "2025-12-10",
       "category": "Feature",
       "description": "New content can be easily added by editing the JSON file without changing the HTML code.",
-      "image": ""
+      "image": "",
+      "active": false
     },
     {
       "id": 4,
@@ -30,7 +45,8 @@
       "date": "2025-12-09",
       "category": "Design",
       "description": "The website is fully responsive and automatically adapts to different screen sizes.",
-      "image": ""
+      "image": "",
+      "active": false
     }
   ]
 }
