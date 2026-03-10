@@ -16,7 +16,7 @@ TEAMS
                     <h3>P1 – SLU (Sweden)</h3>
                     <p><strong>Project Coordination, WP1, WP2 &amp; WP4 Lead</strong></p>
                     <p>Swedish University of Agricultural Sciences provides expertise in agroecology, plant-microbe interactions, and communication research. The coordination team manages overall project progress, reporting, and consortium activities.</p>
-                    <p><em>Staff effort: 52 person-months</em></p>
+                    <p><em>Staff effort: 52 person-months</em></p> 
                 </article>
                 <article class="card">
                     <h3>P2 – WUR (Netherlands)</h3>
