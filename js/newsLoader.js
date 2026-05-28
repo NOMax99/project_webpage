@@ -5,10 +5,17 @@
  */
 export async function loadNews() {
     try {
-        const response = await fetch('data/news.json');
+        let response = await fetch('data/news.json');
+
+        // Retry once with cache-bypass to avoid stale CDN/browser caches.
+        if (!response.ok) {
+            response = await fetch(`data/news.json?v=${Date.now()}`, { cache: 'no-store' });
+        }
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
+
         const data = await response.json();
         renderNews(data.news);
     } catch (error) {
@@ -32,8 +39,11 @@ function renderNews(newsItems) {
     // Clear existing content
     newsContainer.innerHTML = '';
 
-    // Filter only active news items
-    const activeNews = newsItems.filter(item => item.active === true);
+    // Filter only active news items (accept bool, string, and numeric values)
+    const activeNews = newsItems.filter(item => {
+        const value = item?.active;
+        return value === true || value === 'true' || value === 1 || value === '1';
+    });
 
     // Sort news by date (newest first)
     const sortedNews = activeNews.sort((a, b) => {
